@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+import {errorHandler} from "./middlewares/error.middlewares.js"
 const app = express()
 
 app.use(
@@ -24,7 +25,7 @@ app.use(cookieParser())
 //import routes
 import userRouter from './routes/user.routes.js'
 import healthcheckRouter from "./routes/healthcheck.routes.js"
-import postRouter from "./routes/tweet.routes.js"
+import postRouter from "./routes/post.routes.js"
 import subscriptionRouter from "./routes/subscription.routes.js"
 import videoRouter from "./routes/video.routes.js"
 import commentRouter from "./routes/comment.routes.js"
